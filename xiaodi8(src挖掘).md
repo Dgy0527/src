@@ -140,3 +140,35 @@ https://forum.butian.net/share/1125
 ## 业务逻辑漏洞:地址校验逻辑存在缺陷漏洞
 ### 650000 -> 650000.0
 
+# 37、短信验证码缺陷到弱口令
+## 爆破短信验证码
+
+# 38、某EDU通用系统渗透测试
+## sso
+## 任意用户登录
+## 存储xss
+
+# 39、2026浏览器安全插件
+## 幻影(phantom)
+## 雪瞳(SnowEyes)
+## LoveJS
+## Shodan
+## Charset
+## HackBar
+## Proxy24
+## Finger24
+## NoScript
+## Heimdallr
+## Vue Crack
+## ThreatCheck
+## HackTools++
+## 上帝之眼(GodEyes)
+## 黄油曲奇(Butter_Cookie)
+## X情报查询助手
+## Domain Search
+## FindSomething
+## 玄镜(AegisScope)
+## AntiDebug Breaker
+## Wappalyzer
+## WPBurp
+## ProxySwitchOmega3
