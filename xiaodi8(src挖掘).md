@@ -115,3 +115,28 @@ https://forum.butian.net/share/1125
 ## (2)Agent:Agent=LLM+Planning+Memory+Tool Use
 ## (3)Skill/Tools:外部程序或API接口
 ## (4)MCP(mODEL Context Protocol):模型上下文协议，"USB接口标准"
+
+# 32、小程序资产测文件上传
+## 文件名注入:改content-type
+### png -> html
+## asp的"马"
+### <%Response.Write("test...")%>
+![alt text](img/image-25.png)
+
+# 33、爆破支付密码绕过限制
+## 使用bp的爆破功能破解6位数的密码
+
+# 34、APP绕过时间过期限制
+## 使用bp修改参数
+
+# 35、EDU证书985泄露越权
+## url里面的"#"大概率是webpack打包的方式
+![alt text](img/image-26.png)
+## webpack
+![alt text](img/image-27.png)
+## 越权漏洞
+
+# 36、小程序让地址校验失效
+## 业务逻辑漏洞:地址校验逻辑存在缺陷漏洞
+### 650000 -> 650000.0
+
