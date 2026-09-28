@@ -172,3 +172,7 @@ https://forum.butian.net/share/1125
 ## Wappalyzer
 ## WPBurp
 ## ProxySwitchOmega3
+
+# 40、某医院系统渗透测试
+## 验证码回显漏洞
+## 忘记密码功能 —> 验证身份功能
