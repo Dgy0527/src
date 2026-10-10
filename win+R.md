@@ -48,13 +48,20 @@
 # `dxdiag` :DirectX诊断工具(看显卡、声卡、系统硬件信息)
 # `cleanmgr`(Clean Manager) :磁盘清理
 # `resmon`(Resource Monitor) :资源监视器(比任务管理器更详细,能看网络占用和端口)
+# `perfmon` :性能监视器
+# `osk`(On-Screen Keyboard) :屏幕键盘(物理键盘坏了可以用鼠标点)
 ![alt text](img/image-42.png)
 
 
 
-
+常用小程序
+# `calc`(Calculator) :计算器
+# `notepad` :记事本
+# `mspaint`(Microsoft Paint) :画图
+# `snippingtool`/`ms-screenclip` :截图工具
+# `explorer` :文件资源管理器(桌面崩了敲这个重新打开桌面)
+# `control` :控制面板
 ![alt text](img/image-43.png)
-
 
 
 
