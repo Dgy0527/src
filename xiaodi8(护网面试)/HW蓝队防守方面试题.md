@@ -1,4 +1,5 @@
 # 1、应急响应
+![alt text](../img-2/image-2.png)
 ## (1)基本思路流程
 ### 收集信息:收集客户信息和中毒主机信息,包括样本
 ### 获取基础数据(判断类型):判断是否是安全事件,何种安全事件(勒索、挖矿、断网、Dos等)
@@ -9,3 +10,33 @@
 ### 总结复盘
 
 # 2、Windows入侵排查思路
+![alt text](../img-2/image-3.png)
+## （1）检查系统账号安全
+### `netstat -ano/netstat -anob` :查看服务器是否有弱口令,远程管理端口是否对公网开放
+### 使用`lusrmgr.msc`查看服务器是否存在可疑账号、新增账号
+### 检查管理员群组(Administrators)里的新增账户,如果有则立即禁用或删除
+### 使用D盾或者注册表查看是否存在隐藏账号、克隆账号
+### 结合日志,查看管理员登陆时间、用户名是否存在异常
+#### win+R -> eventvwr.msc -> Windows日志 -》 安全 -> 导出 -> Log Parser分析
+## (2)检查异常端口、进程
+### `netstat -ano` :检查端口连接情况
+### 任务管理器查看进程 :win+R -> `taskmgr`
+## (3)检查启动项(taskmgr)、计划任务(taskschd.msc)、服务(services.msc)
+## (4)查看系统相关信息
+### 系统版本以及补丁信息
+### 查找可疑目录及文件
+### 日志分析
+
+# 3、Linux入侵排查思路
+![alt text](../img-2/image-4.png)
+![alt text](../img-2/image-5.png)
+![alt text](../img-2/image-6.png)
+![alt text](../img-2/image-7.png)
+## (1)账号安全
+### `who` :查看当前登录用户(tty本地登录,pts远程登录)
+### `w` :查看系统信息和用户行为
+### `uptime` :查看登陆时长、用户数、负载
+## (2)用户信息文件
+### `/etc/passwd` :任何人可访问
+### `/etc/shadow` :仅root可访问
+## (3)历史命令
