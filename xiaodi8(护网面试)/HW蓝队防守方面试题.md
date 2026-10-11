@@ -40,3 +40,55 @@
 ### `/etc/passwd` :任何人可访问
 ### `/etc/shadow` :仅root可访问
 ## (3)历史命令
+### `history` :查看root的历史命令
+### `history -c` :清除历史,需手动删除文件记录
+## (4)检查异常端口
+### `netstat -antlp | more`
+#### a :all
+#### n :numeric
+#### t :tcp
+#### l :listening
+#### p :program
+![alt text](../img-2/image-8.png)
+![alt text](../img-2/image-9.png)
+### `ls -l /proc/$PID/exe` :查看进程文件路径
+![alt text](../img-2/image-10.png)
+![alt text](../img-2/image-11.png)
+### `file /proc/$PID/exe` :查看进程文件类型
+## (5)`ps aux | grep pid` :查找特定进程
+![alt text](../img-2/image-12.png)
+![alt text](../img-2/image-13.png)
+## (6)
+### `/etc/rc.d/rc[0~6].d`
+![alt text](../img-2/image-14.png)
+##  `/etc/systemd`
+![alt text](../img-2/image-15.png)
+![alt text](../img-2/image-16.png)
+## (7)检查定时任务
+### `crontab(cron table) -l` :查看当前用户定时任务
+### `crontab -e` :编辑当前用户定时任务
+### `crontab -r` :删除当前用户所有定时任务(慎用)
+## (8)检查服务
+### `chkconfig --list`
+![alt text](../img-2/image-17.png)
+## (9)Linux登录日志查看
+### `/var/log/wtmp` :存储登录成功的信息 
+### `/var/log/btmp` :存储登录失败的信息 
+### `/var/log/utmp` :存储当前正在登录的信息
+### `cat /etc/passwd | grep '/bin/bash'` :查看可登录账户
+### `lastlog` :查看所有用户最后的登录信息
+### `last` :查看用户最近登录信息
+### `who` :查看当前登录系统情况
+## (10)Linux常用排查命令
+### `top` :查看当前系统状态
+### `uname -a` :操作系统信息
+### `ps` :查看系统进程信息
+### `history` :列出历史命令
+### `netstat` :列出本机所有连接和监听端口
+### `lsof(list open file)` :查看谁在使用某个端口
+![alt text](../img-2/image-18.png)
+### `lastb(last bad/last btmp)` :查看用户错误的登录信息
+![alt text](../img-2/image-19.png)
+![alt text](../img-2/image-20.png)
+### kali要安装`util-linux`软件包 :sudo apt install util-linux
+![alt text](../img-2/image-21.png)
