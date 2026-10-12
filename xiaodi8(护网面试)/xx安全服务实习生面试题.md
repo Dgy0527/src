@@ -9,6 +9,7 @@
 ## 字符型:` id=1' and '1'='1 `(正常)、` id=1' and '1'='2`(异常).参数需要闭合引号才能生效
 
 # 7、UDF提权的原理
+## UDF(User Defined Function):用户自定义函数
 ## 前提:MySQL服务以高权限(root或system)运行
 ## 原理:利用MySQL的`plugin_dir`目录,将恶意的动态链接库(Windows下是DLL,Linux下是SO)写入该目录.然后通过SQL语句`CREATE FUNCTION`创建自定义函数(如`sys_eval`),调用该函数即可执行系统命令,实现提权
 
