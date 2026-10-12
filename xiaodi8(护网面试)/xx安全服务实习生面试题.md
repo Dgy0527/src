@@ -29,16 +29,17 @@
 # 11、反序列化漏洞原理及利用(以Fastjson为例)
 ## 原理:程序在将字节流/字符串反序列化为对象是,会自动调用对象中的特定方法(如getter、setter、构造函数).如果攻击者能控制输入,就能构造恶意的序列化数据,触发恶意代码执行
 ## Fastjson利用:构造带有`@type`属性的JSON数据,指向恶意类(如`TemplatesImpl`),在反序列化时触发`getter`方法,导致远程代码执行(RCE) 
-## RCE(Remote Code Execution) :远程代码执行
+## RCE(Remote Code Execution) :远程代码执行,危害最高,相当于拿到了服务器的最高控制权
 
 # 12、有WAF的情况下如何绕过文件上传
 ## 修改`Content-Type`(如改为`image/jpeg`)
 ## 修改文件头(如添加`GIF89a`)
 ## 扩展名变形(`php5`、`phtml`、`php.`、大小写混写、双写`pphphp)
 
-# 13、什么是00截断
+# 13、什么是00截断(Null Byte Injection/Null Character Injection)
 ## 原理:在C语言等底层语言中,`\0`(空字符)代表字符串结束.在PHP5.3.4之前或未受GPC保护时,`%00`可以截断后面的路径或扩展名
 ## 示例:上传文件名为`shell.php%00.jpg`,后端保存时,以为`%00`被解析为空字符,实际保存为`shell.php`,从而绕过白名单校验
+## GPC(Get Post Cookie) :`magic_quotes_gpc`,防御SQL注入和XSS
 
 # 14、JWT的具体结构与令牌伪造原理
 ## 结构:`Header.Payload.Signature`三部分均用Base64URL编码
