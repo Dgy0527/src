@@ -1,3 +1,6 @@
+# 管理员身份运行 :Ctrl+Shift+回车
+![alt text](img/image-44.png)
+
 系统与核心管理
 # cmd(Command Prompt) :命令提示符
 # `taskmgr`(Task Manager) :任务管理器(管理进程、结束卡死的软件)
@@ -65,5 +68,3 @@
 
 
 
-# 管理员身份运行 :Ctrl+Shift+回车
-![alt text](img/image-44.png)
