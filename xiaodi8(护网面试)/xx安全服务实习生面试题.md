@@ -42,6 +42,7 @@
 ## GPC(Get Post Cookie) :`magic_quotes_gpc`,防御SQL注入和XSS
 
 # 14、JWT的具体结构与令牌伪造原理
+## JWT(Json Web Token) :web应用中的身份认证机制,"防伪的电子门票"
 ## 结构:`Header.Payload.Signature`三部分均用Base64URL编码
 ![alt text](../img-2/image-25.png)
 
@@ -55,6 +56,22 @@
 # 17、服务器出现异常外连IP的排查与处理
 ## 排查:`netstat -antlp`或`lsof -i`查看外连IP;`ps aux`查看可疑进程;`ls -l /proc/PID/exe`查看进程源文件
 ## 处置:立即断网(防火墙隔离/拔网线);保留证据(内存、日志、样本);杀死恶意进程;修复漏洞;重装系统(如果被提权)
+### `netstat -antlp`
+#### -a :all
+#### -n :numeric
+#### -t :tcp
+#### -l :listening
+#### -p :program
+### `lsof(List Open File) -i` :Linux中列出所有的网络连接(TCP/UDP)
+### `ps aux` :Linux中列出当前系统中所有正在运行的进程，并显示详细的资源占用和启动信息
+#### ps :Process Status
+#### a :all
+#### u :user
+#### x :显示没有控制终端的进程
+### `ls -l /proc/PID/exe` :Linux中排查恶意进程时的“终极溯源命令”
+#### /proc :Linux的虚拟文件系统,存放内核和进程的实时信息
+#### PID :进程ID
+#### /exe :软链接,指向启动该进程的原始可执行文件
 
 # 18、webshell是什么?冰蝎和哥斯拉的流量监测思路
 ## webshell:web后门,通过web服务执行系统命令
