@@ -7,3 +7,13 @@
 ## 使用指定的私钥登录远程服务器
 ## `-i key` :指定身份文件,告诉SSH客户端用`key`这个私钥去证明我的身份
 ## `hacker@dojo.pwn.college` :目标服务器的用户名和地址
+
+# `cat key.pub >> ~/.ssh/authorized_keys` :把公钥追加到授权文件中
+
+# `ssh -i key 用户名@地址` :登录
+
+# `chmod 600 key` :Linux(Kali)中要给私钥降权
+
+![alt text](img-2/image-31.png) 
+![alt text](img-2/image-32.png)
+![alt text](img-2/image-33.png)
