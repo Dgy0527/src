@@ -3,3 +3,5 @@
 ## 2、伪终端(Pseudo-terminal Slave,简称pts/X) :`/dev/pts/0`;在图形化终端窗口显示
 ![alt text](../img-2/image-34.png)
 ![alt text](../img-2/image-35.png)
+
+# suid提权
